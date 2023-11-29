@@ -31,3 +31,5 @@ cada leitura dos sensores, proporcionando um registro temporal preciso das infor
 
 
 ## Imagem do sensor 
+
+![screenshot](print.jpeg)
