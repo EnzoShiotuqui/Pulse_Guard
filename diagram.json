@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Enzo Shiotuqui",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 150.6, "left": 281.2, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 172.8, "left": -81.56, "attrs": {} },
+    { "type": "chip-pulse", "id": "pulse", "top": 346.62, "left": 81.6, "attrs": {} },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd2",
+      "top": -80,
+      "left": 24.8,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pulse:PULSE", "esp:5", "green", [ "h40.21", "v163.2" ] ],
+    [ "lcd2:SDA", "esp:21", "blue", [ "h-86.4", "v-9.4" ] ],
+    [ "lcd2:SCL", "esp:22", "purple", [ "h-28.8", "v29.1", "h-67.2", "v-76.8" ] ],
+    [ "esp:GND.2", "bb1:tn.21", "black", [ "v0", "h67.2" ] ],
+    [ "esp:3V3", "bb1:tp.1", "green", [ "h-47.85", "v230.4" ] ],
+    [ "lcd2:GND", "bb1:tn.17", "black", [ "h0" ] ],
+    [ "lcd2:VCC", "bb1:tp.18", "red", [ "h0" ] ],
+    [ "pulse:VCC", "bb1:tp.3", "red", [ "h0" ] ],
+    [ "pulse:GND", "bb1:tn.16", "black", [ "h0", "v-19.2", "h124.8" ] ]
+  ],
+  "dependencies": {}
+}
