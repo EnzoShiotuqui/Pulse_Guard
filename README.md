@@ -33,3 +33,18 @@ cada leitura dos sensores, proporcionando um registro temporal preciso das infor
 ## Imagem do sensor 
 
 ![screenshot](print.jpeg)
+
+
+## Requisitos
+
+<p>No back-end do projeto, empregamos o Fiware . O Fiware facilita a coleta, armazenamento e transporte de dados capturados pelo sensor de freq-cardíaca. Esses dados são então integrados à nossa aplicação de front-end, onde são apresentados aos usuários de maneira clara e intuitiva.</p>
+
+<p>No front-end do projeto, foi utlizado o freeboard para manejo das informações, foi apresentados os números e gráficos para ficar mais fácil da vizualização das informações da freq-cardíaca do usuário, sendo sempre claro e intuitivo.</p>
+
+<ul>
+  Outros requisitos
+  <li>Postman</li>
+  <li>ESP 32</li>
+  <li>LCD</li>
+  <li>gerador de pulso</li>
+</ul>
