@@ -15,13 +15,15 @@ LiquidCrystal_I2C LCD(0x27, 20, 4);
 #define INTERRUPT_PIN     5
 #define SAMPLING_INTERVAL 1000
 
+//envia dados como bpm e hora
 #define TOPICO_SUBSCRIBE    "/TEF/PulseGuard008/cmd"
 #define TOPICO_PUBLISH      "/TEF/PulseGuard008/attrs"
-#define TOPICO_PUBLISH_2    "/TEF/PulseGuard008/attrs/bpm"
-#define TOPICO_PUBLISH_3    "/TEF/PulseGuard008/attrs/h"
+#define TOPICO_PUBLISH_2    "/TEF/PulseGuard008/attrs/bpm"  
+#define TOPICO_PUBLISH_3    "/TEF/PulseGuard008/attrs/h"  
 
 #define ID_MQTT  "fiware_PG"
 
+// configurar rede wifi 
 const char* SSID = "Wokwi-GUEST";
 const char* PASSWORD = "";
 
@@ -62,6 +64,7 @@ void initSerial() {
   }
 }
 
+// função para iniciar o LCD
 void initLCD() {
   LCD.init();
   LCD.backlight();
