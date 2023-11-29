@@ -5,6 +5,7 @@
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 
+// configuração do lcd
 LiquidCrystal_I2C LCD(0x27, 20, 4);
 
 #define NTP_SERVER     "a.ntp.br"
